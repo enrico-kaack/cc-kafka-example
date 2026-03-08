@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: producer
-        image: kafka-demo-app:latest # User will need to build this
+        image: ghcr.io/enrico-kaack/cc-kafka-example:main
         env:
         - name: APP_MODE
           value: "PRODUCER"

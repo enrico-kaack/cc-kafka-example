@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: consumer
-        image: kafka-demo-app:latest
+        image: ghcr.io/enrico-kaack/cc-kafka-example:main
         env:
         - name: APP_MODE
           value: "CONSUMER"
