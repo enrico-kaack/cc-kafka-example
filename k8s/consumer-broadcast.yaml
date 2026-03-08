@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consumer-broadcast
+spec:
+  replicas: 2 # Two replicas to show both getting the same message
+  selector:
+    matchLabels:
+      app: consumer-broadcast
+  template:
+    metadata:
+      labels:
+        app: consumer-broadcast
+    spec:
+      containers:
+      - name: consumer
+        image: kafka-demo-app:latest
+        env:
+        - name: APP_MODE
+          value: "CONSUMER"
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          value: "my-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092"
+        - name: KAFKA_TOPIC
+          value: "demo-topic"
+        - name: CONSUMER_GROUP_ID
+          value: "broadcast-group"
+        - name: UNIQUE_GROUP_ID
+          value: "true"
