@@ -19,7 +19,7 @@ The application (`app/main.py`) behavior is defined by environment variables:
 
 ## Kubernetes Manifests (`k8s/`)
 
-- `kafka.yaml`: A basic Kafka deployment for testing.
+- `kafka-topic.yaml`: A basic Kafka Topic definition that will create a topic in Kafka.
 - `producer.yaml`: The HTTP-to-Kafka gateway.
 - `consumer-group.yaml`: Deployment with 2 replicas sharing `shared-group`.
 - `consumer-broadcast.yaml`: Deployment with 2 replicas where each gets every message.

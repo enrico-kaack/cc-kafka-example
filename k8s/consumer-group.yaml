@@ -19,7 +19,7 @@ spec:
         - name: APP_MODE
           value: "CONSUMER"
         - name: KAFKA_BOOTSTRAP_SERVERS
-          value: "kafka:9092"
+          value: "my-cluster-kafka-bootstrap.kafka.svc.cluster.local:9092"
         - name: KAFKA_TOPIC
           value: "demo-topic"
         - name: CONSUMER_GROUP_ID
