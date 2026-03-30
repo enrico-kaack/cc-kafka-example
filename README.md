@@ -8,6 +8,8 @@ This repository demonstrates a Python application interacting with Kafka, contai
 - **Consumer (Load Balanced)**: Multiple instances sharing a single consumer group. Kafka ensures each message is processed by only one instance in the group.
 - **Consumer (Broadcast)**: Each instance uses a unique consumer group ID, so every instance receives every message.
 
+![Kafka Architecture](./overview.drawio.svg)
+
 ## Application Modes
 
 The application (`app/main.py`) behavior is defined by environment variables:
